@@ -1,0 +1,251 @@
+
+<head>
+    <style>
+        /* Header Styling */
+
+.site-header {
+  position: fixed; /* Stays on top when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 20px; /* Increased padding for more vertical space */
+  background: transparent; /* Default transparent background */
+  box-shadow: none; /* No shadow by default */
+  z-index: 100;
+  display: flex;
+  justify-content: center; /* Centers the container within the header */
+  align-items: center; /* Vertically centers content */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and text color */
+}
+
+/* New class for scrolled header state */
+.site-header.scrolled {
+  background-color: #ffffff; /* White background when scrolled */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Subtle shadow when scrolled */
+}
+
+.site-header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Pushes logo to left, nav to right */
+  align-items: center; /* Vertically centers logo and nav within container */
+}
+
+.site-header .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff; /* Default white logo color */
+  user-select: none;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for logo color */
+}
+
+/* Color change for logo when header is scrolled */
+.site-header.scrolled .logo {
+  color: #1a1a1a; /* Dark logo color when scrolled */
+}
+
+/* Desktop Navigation */
+.main-nav {
+  display: flex; /* Show by default on desktop */
+  justify-content: flex-end; /* Align nav links to the right */
+  flex-wrap: wrap; /* Allow links to wrap */
+}
+
+.main-nav a {
+  margin: 0 0 0 30px; /* Adjusted margin for spacing between links */
+  text-decoration: none;
+  color: #ffffff; /* Default white nav link color */
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: color 0.3s ease; /* Smooth transition for link color */
+  padding: 5px 0;
+}
+
+/* Color change for nav links when header is scrolled */
+.site-header.scrolled .main-nav a {
+  color: #1a1a1a; /* Dark nav link color when scrolled */
+}
+
+.main-nav a:first-child {
+    margin-left: 0; /* No left margin for the first nav item */
+}
+
+.main-nav a:hover {
+  color: #cccccc; /* Default hover color */
+}
+
+/* Hover color change for nav links when header is scrolled */
+.site-header.scrolled .main-nav a:hover {
+  color: #777; /* Darker hover color when scrolled */
+}
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  z-index: 101; /* Above mobile menu overlay */
+}
+
+.hamburger-menu .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #ffffff; /* Default white bars */
+  transition: all 0.3s ease-in-out; /* Smooth transition for bars */
+}
+
+/* Color change for hamburger bars when header is scrolled */
+.site-header.scrolled .hamburger-menu .bar {
+  background-color: #1a1a1a; /* Dark bars when scrolled */
+}
+
+/* Color change for hamburger bars when header is scrolled */
+.hamburger-menu.is-active .bar {
+  background-color: #1a1a1a; /* Dark bars when scrolled */
+}
+
+/* Mobile Navigation Overlay */
+.mobile-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99; /* Below hamburger, above content */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.mobile-nav-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mobile-nav a {
+  color: #1a1a1a; /* Dark text for mobile menu */
+  text-decoration: none;
+  font-size: 1.5rem; /* Larger font size for mobile links */
+  padding: 15px 0;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .site-header .main-nav {
+    display: none; /* Hide desktop nav on mobile */
+  }
+
+  .site-header .hamburger-menu {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .site-header .container {
+    justify-content: space-between; /* Ensure logo is left, hamburger is right */
+    width: 100%;
+  }
+
+  .site-header {
+    padding: 20px;
+    flex-direction: row; /* Keep logo and hamburger horizontal */
+  }
+
+  /* Hamburger menu animation for active state */
+  .hamburger-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 15px 10px;
+  }
+  .mobile-nav a {
+    font-size: 1.3rem;
+  }
+}
+/* Login button styling */
+.login-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px;
+  margin-left: 16px; /* Adjust spacing from other nav items */
+}
+
+.login-icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);        /* Makes icon white—useful on dark headers */
+  transition: filter 0.3s ease;
+}
+
+.login-btn:hover .login-icon {
+  filter: invert(0.7);      /* Lighter hover effect */
+}
+
+    </style>
+
+</head>
+
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html#main-slider" class="logo">AMONTON</a>
+    <button class="hamburger-menu" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <nav class="main-nav"> <!-- Desktop Navigation -->
+      <a href="index.html#main-slider"  class="nav_link">Home</a>
+      <a href="index.html#about-section" class="nav_link">About</a>
+      <a href="index.html#contact-section"  class="nav_link">Contact</a>
+      <!-- Login Icon -->
+    <a href="https://amonton.softr.app/login" class="login-btn" aria-label="Login">
+      Login
+    </a>
+
+    </nav>
+  </div>
+  <div class="mobile-nav-overlay"> <!-- Mobile Navigation Overlay -->
+    <nav class="mobile-nav">
+      <a href="index.html#main-slider"  class="nav_link">Home</a>
+      <a href="index.html#about-section"  class="nav_link">About</a>
+      <a href="index.html#contact-section"  class="nav_link">Contact</a>
+      <a href="https://amonton.softr.app/login" class="login-btn" aria-label="Login">
+        Login
+      </a>
+    </nav>
+  </div>
+</header>

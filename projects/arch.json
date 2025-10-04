@@ -1,0 +1,26 @@
+[
+  {
+    "folder": "project1",
+    "size": 2
+  },
+  {
+    "folder": "project1",
+    "size": 1
+  },
+  {
+    "folder": "project1",
+    "size": 1
+  },
+  {
+    "folder": "project4",
+    "size": 1
+  },
+  {
+    "folder": "project2",
+    "size": 1
+  },
+  {
+    "folder": "project3",
+    "size": 2
+  }
+]

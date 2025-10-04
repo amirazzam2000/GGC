@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+       /* --- Project Page Specific Styles --- */
+    /* Main wrapper for the whole project content area */
+    .project-page-main {
+      position: relative;
+      width: 100%; /* Ensure main spans full width */
+    }
+
+    /* Hero Section - full width, height for background image */
+    .project-hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Full viewport height for hero section */
+      max-height: 100vh;
+      /* margin-top: -120px; Pulls section up under the fixed header */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; /* Ensure video/image doesn't overflow */
+    }
+
+    .project-hero-image,
+    .project-hero-video {
+      width: 100%;
+      height: 100%; /* Fill parent .project-hero-section */
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Text overlay on hero image */
+    .hero-text-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; /* Fill .project-hero-section */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10; /* Above image, below fixed header */
+      color: #ffffff; /* White text on hero image */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* For better readability */
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hero-text-overlay h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: inherit;
+    }
+
+    .hero-text-overlay .meta-info {
+      font-size: 0.9rem;
+      color: inherit;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Container for sections that should have constrained width and centering */
+    .content-section-container {
+      max-width: 1400px;
+      margin: 0 auto; /* Centers the container */
+      padding: 80px 40px; /* Standard padding */
+      width: 100%; /* Takes full width up to max-width */
+    }
+
+    .project-meta-and-description {
+      display: grid;
+      grid-template-columns: 1fr 2fr; /* 1/3 for meta, 2/3 for description on desktop */
+      gap: 60px; /* Gap between columns */
+      align-items: start; /* Align content to the top */
+    }
+
+    .project-meta-details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Spacing between meta items */
+    }
+
+    .project-meta-details .detail-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-meta-details .detail-label {
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #555;
+        margin-bottom: 5px;
+    }
+
+    .project-meta-details .detail-value {
+        font-size: 1rem;
+        color: #1a1a1a;
+    }
+
+    /* Full-width Separator Style - Removed red color and height */
+    .full-width-separator {
+        width: 100vw; /* Occupies full viewport width */
+        height: 0; /* No visible line */
+        background-color: transparent; /* No background color */
+        margin-left: calc(50% - 50vw); /* Pushes it to the far left edge */
+        margin-top: 40px; /* Space above the separator */
+        margin-bottom: 40px; /* Space below the separator */
+    }
+
+    .project-description-section {
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    /* Grid for dynamic content spanning full width of its parent (.content-section-container) */
+    .project-dynamic-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 3 columns by default */
+        gap: 40px;
+        width: 100%; /* Takes full width of its parent content-section-container */
+    }
+
+    .project-dynamic-grid .grid-item {
+        /* Default item style */
+        height: auto; /* Fixed height for all images/videos in the grid */
+    }
+
+    .project-dynamic-grid .grid-item img,
+    .project-dynamic-grid .grid-item video {
+        width: 100%;
+        height: 500px; /* Fixed height for all images/videos in the grid */
+        object-fit: cover; /* Zooms in and crops to fit the fixed height */
+        display: block;
+    }
+
+    .project-dynamic-grid .grid-item p {
+        text-align: left; /* Center text horizontally */
+        height: auto;
+        padding: 10px; /* Add some padding to text */
+    }
+
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+
+      .project-hero-section {
+        height: 100vh; /* Smaller height on mobile */
+      }
+
+      .hero-text-overlay h1 {
+        font-size: 2.2rem;
+      }
+
+      .content-section-container {
+        padding: 60px 20px; /* Adjusted padding for mobile */
+      }
+
+      .project-meta-and-description {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 40px;
+      }
+
+      .project-description-section {
+        font-size: 1rem;
+      }
+
+      .project-dynamic-grid {
+        grid-template-columns: 1fr; /* Single column on mobile for dynamic grid */
+        gap: 30px;
+      }
+      .project-dynamic-grid .grid-item {
+        grid-column: span 1 !important; /* Ensure items don't span on mobile */
+      }
+      .project-dynamic-grid .grid-item img,
+      .project-dynamic-grid .grid-item video {
+        height: 500px; /* Adjust height for mobile */
+      }
+
+      .full-width-separator {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1023px) {
+        .content-section-container {
+            padding: 70px 30px;
+        }
+        .project-meta-and-description {
+            grid-template-columns: 1fr 2fr; /* Tablet layout */
+            gap: 40px;
+        }
+        .project-meta-details {
+            gap: 15px;
+        }
+        .project-dynamic-grid {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+            gap: 30px;
+        }
+        .project-dynamic-grid .grid-item img,
+        .project-dynamic-grid .grid-item video {
+            height: 500px; /* Adjust height for tablets */
+        }
+    }
+
+    @media (max-width: 480px) {
+      .site-header {
+        padding: 15px 10px;
+      }
+      .mobile-nav a {
+        font-size: 1.3rem;
+      }
+      .content-section-container {
+        padding: 40px 15px;
+      }
+      .hero-text-overlay h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+      .hero-text-overlay .meta-info {
+        font-size: 0.8rem;
+      }
+    }
+
+  </style>
+  <script src="common_functions.js"></script>
+</head>
+<body>
+<base id="baseTag" href="/">
+
+<div id="header-placeholder"></div>
+<main class="project-page-main">
+  </main>
+
+
+<div id="footer-placeholder"></div>
+
+<script>
+  // --- Header Scroll Logic (Replicated) ---
+  function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+
+  const path = getUrlParameter('project');
+  document.title = `${path} | AMONTON`;
+
+  function getFullBaseURL() {
+      const { origin, pathname } = window.location;
+      const pathParts = pathname.split('/');
+      const projectIndex = pathParts.indexOf('AMONTON');
+
+      if (projectIndex >= 0) {
+        // Include everything up to and including 'AMONTON'
+        const basePath = pathParts.slice(0, projectIndex + 1).join('/');
+        return `${origin}${basePath}/`;
+      } else {
+        return `${origin}/`;
+      }
+    }
+
+    document.getElementById('baseTag').setAttribute('href', getFullBaseURL());
+
+
+  // --- Project Page Content Loading Logic ---
+  async function loadProjectContent() {
+    const projectPageMain = document.querySelector('.project-page-main');
+
+    try {
+      const response = await fetch(`projects/${path}/metadata.json`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const project = await response.json();
+
+      projectPageMain.innerHTML = ''; // Clear existing content
+
+      // 1. Create Hero Section (Image/Video + Overlay Text)
+      const projectHeroSection = document.createElement('div');
+      projectHeroSection.className = 'project-hero-section';
+
+      // Find the header media (video or image) from the 'content' array
+      const headerVideoContent = project.content.find(item => item.type === 'header-vid');
+      const headerImageContent = project.content.find(item => item.type === 'header-img');
+
+      if (headerVideoContent) {
+        const heroVideo = document.createElement('video');
+        heroVideo.className = 'project-hero-video';
+        heroVideo.src = `projects/${path}/${headerVideoContent.src}`;
+        heroVideo.alt = headerVideoContent.alt || project.title;
+        heroVideo.autoplay = true;
+        heroVideo.loop = true;
+        heroVideo.muted = true;
+        heroVideo.playsInline = true; // For iOS autoplay
+        heroVideo.onerror = function() {
+            this.onerror=null;
+            this.src='https://placehold.co/1400x700/eeeeee/333333?text=Project+Hero+Video+Missing';
+        };
+        projectHeroSection.appendChild(heroVideo);
+      } else if (headerImageContent) {
+        const heroImage = document.createElement('img');
+        heroImage.className = 'project-hero-image';
+        heroImage.src = `projects/${path}/${headerImageContent.src}`;
+        heroImage.alt = headerImageContent.alt || project.title;
+        heroImage.onerror = function() {
+            this.onerror=null;
+            this.src='https://placehold.co/1400x700/eeeeee/333333?text=Project+Hero+Image+Missing';
+        };
+        projectHeroSection.appendChild(heroImage);
+      } else {
+         // Fallback if no header media is specified
+         const noHeroDiv = document.createElement('div');
+         noHeroDiv.style.height = '100%';
+         noHeroDiv.style.width = '100%';
+         noHeroDiv.style.background = '#f0f0f0';
+         noHeroDiv.style.display = 'flex';
+         noHeroDiv.style.justifyContent = 'center';
+         noHeroDiv.style.alignItems = 'center';
+         noHeroDiv.style.color = '#888';
+         noHeroDiv.textContent = 'No Hero Media Available';
+         projectHeroSection.appendChild(noHeroDiv);
+      }
+
+      // Hero Text Overlay (Title and Meta-info)
+      const heroTextOverlay = document.createElement('div');
+      heroTextOverlay.className = 'hero-text-overlay';
+
+      const titleElement = document.createElement('h1');
+      titleElement.textContent = project.title;
+      heroTextOverlay.appendChild(titleElement);
+
+      const metaInfo = document.createElement('p');
+      metaInfo.className = 'meta-info';
+      metaInfo.textContent = `${Array.isArray(project.category) ? project.category.join(' | ') : project.category || 'Not specified'} | ${project.year || 'Not specified'}`;
+      heroTextOverlay.appendChild(metaInfo);
+
+      projectHeroSection.appendChild(heroTextOverlay);
+      projectPageMain.appendChild(projectHeroSection);
+
+      // 2. Container for Meta Details and Description (constrained width)
+      const metaDescriptionContainer = document.createElement('div');
+      metaDescriptionContainer.className = 'content-section-container project-meta-and-description';
+
+      // Left Column: Project Meta Details
+      const projectMetaDetails = document.createElement('div');
+      projectMetaDetails.className = 'project-meta-details';
+
+      // LOCATION
+      const locationGroup = document.createElement('div');
+      locationGroup.className = 'detail-group';
+      locationGroup.innerHTML = `<div class="detail-label">LOCATION</div><div class="detail-value">${project.location || 'Not specified'}</div>`;
+      projectMetaDetails.appendChild(locationGroup);
+
+      // PHOTOGRAPHY
+      if (project.photography) {
+          const photographyGroup = document.createElement('div');
+          photographyGroup.className = 'detail-group';
+          let photographyValueText = 'Not specified';
+          if (Array.isArray(project.photography)) {
+              photographyValueText = project.photography.join(', ');
+          } else if (project.photography) {
+              photographyValueText = project.photography;
+          }
+          photographyGroup.innerHTML = `<div class="detail-label">PHOTOGRAPHY</div><div class="detail-value">${photographyValueText}</div>`;
+          projectMetaDetails.appendChild(photographyGroup);
+      }
+
+      if (project.visualization) {
+          const visualizationGroup = document.createElement('div');
+          visualizationGroup.className = 'detail-group';
+          let visualizationValueText = 'Not specified';
+          if (Array.isArray(project.visualization)) {
+              visualizationValueText = project.visualization.join(', ');
+          } else if (project.visualization) {
+              visualizationValueText = project.visualization;
+          }
+          visualizationGroup.innerHTML = `<div class="detail-label">VISUALIZATION</div><div class="detail-value">${visualizationValueText}</div>`;
+          projectMetaDetails.appendChild(visualizationGroup);
+      }
+      // CATEGORY
+      const categoryGroup = document.createElement('div');
+      categoryGroup.className = 'detail-group';
+      const categoryValueText = Array.isArray(project.category) ? project.category.join(' | ') : project.category || 'Not specified';
+      categoryGroup.innerHTML = `<div class="detail-label">CATEGORY</div><div class="detail-value">${categoryValueText}</div>`;
+      projectMetaDetails.appendChild(categoryGroup);
+
+      // YEAR
+      const yearGroup = document.createElement('div');
+      yearGroup.className = 'detail-group';
+      yearGroup.innerHTML = `<div class="detail-label">YEAR</div><div class="detail-value">${project.year || 'Not specified'}</div>`;
+      projectMetaDetails.appendChild(yearGroup);
+
+      metaDescriptionContainer.appendChild(projectMetaDetails);
+
+      // Right Column: Project Description
+      const descriptionSection = document.createElement('div');
+      descriptionSection.className = 'project-description-section';
+      descriptionSection.innerHTML = `<p>${project.description ? project.description.replace(/\n/g, '<br><br>') : 'No description provided.'}</p>`;
+      metaDescriptionContainer.appendChild(descriptionSection);
+
+      projectPageMain.appendChild(metaDescriptionContainer);
+
+      // 3. The full-width separator line is intentionally removed as per previous request.
+
+      // 4. Container for Dynamic Grid (constrained width, but grid fills it)
+      const dynamicGridContainer = document.createElement('div');
+      dynamicGridContainer.className = 'content-section-container';
+
+      // Create the dynamic grid for images, videos, and text from 'content' array
+      const projectGrid = document.createElement('div');
+      projectGrid.className = 'project-dynamic-grid';
+
+      // Filter content to include 'img', 'video', and 'txt' types for the grid
+      const gridContent = project.content.filter(item => item.type === 'img' || item.type === 'txt' || item.type === 'video');
+
+      gridContent.forEach(item => {
+        const gridItem = document.createElement('div');
+        gridItem.className = 'grid-item';
+        // Apply grid-column span based on 'size' property
+        if (item.size) {
+          gridItem.style.gridColumn = `span ${item.size}`;
+        }
+
+        if (item.type === 'img') {
+          const imgElement = document.createElement('img');
+          imgElement.src = `projects/${path}/${item.src}`;
+          imgElement.alt = item.alt || 'Project Image';
+          imgElement.onerror = function() {
+            this.onerror=null;
+            this.src='https://placehold.co/600x400/eeeeee/333333?text=Image+Missing';
+          };
+          gridItem.appendChild(imgElement);
+        } else if (item.type === 'video') {
+          const videoElement = document.createElement('video');
+          videoElement.src = `projects/${path}/${item.src}`;
+          videoElement.alt = item.alt || 'Project Video';
+          videoElement.autoplay = true; // Ensures autoplay for grid videos
+          videoElement.loop = true;     // Ensures looping for grid videos
+          videoElement.muted = true;    // Ensures muted playback for grid videos
+          videoElement.playsInline = true; // Important for iOS autoplay in grid videos
+          
+          videoElement.onerror = function() {
+            this.onerror=null;
+            this.src='https://placehold.co/600x400/eeeeee/333333?text=Video+Missing';
+          };
+          gridItem.appendChild(videoElement);
+        } else if (item.type === 'txt') {
+          const textElement = document.createElement('p');
+          // Assuming 'src' holds the text content for 'txt' type
+          textElement.innerHTML = item.src ? item.src.replace(/\n/g, '<br><br>') : 'No text content provided.';
+          textElement.style.fontSize = '1.1rem';
+          textElement.style.lineHeight = '1.8';
+          textElement.style.color = '#333';
+          gridItem.appendChild(textElement);
+        }
+        projectGrid.appendChild(gridItem);
+      });
+
+      dynamicGridContainer.appendChild(projectGrid);
+      projectPageMain.appendChild(dynamicGridContainer);
+
+    } catch (error) {
+      console.error('Failed to load project metadata:', error);
+      projectPageMain.innerHTML = `
+        <div style="text-align: center; padding: 50px; color: #cc0000;">
+          <h2>Error Loading Project</h2>
+          <p>Could not load details for this project. Please check the URL and the project's metadata.json file.</p>
+          <p>Details: ${error.message}</p>
+          <a href="home.html" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #1a1a1a; color: #ffffff; text-decoration: none; border-radius: 5px;">Go Back to Projects</a>
+        </div>
+      `;
+    }
+  }
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadHeader();
+    loadProjectContent();
+    loadFooter();
+  });
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+        // Get the current URL
+        const currentUrl = window.location.href;
+        // Extract the project folder name from the URL
+        // Assumes URL structure like ".../projects/Project1/index.html"
+        const pathSegments = currentUrl.split('/');
+        const projectFolder = pathSegments[pathSegments.length - 2];
+
+        // Redirect to the main home.html with the projectFolder as a parameter
+        window.location.replace(`../../project.html?project=${projectFolder}`);
+    </script>
+</head>
+<body>
+    <p>If you are not redirected automatically, follow this <a id="redirectLink" href="#">link to the main page</a>.</p>
+    <script>
+          function getBasePath() {
+            const pathParts = window.location.pathname.split('/');
+            const projectIndex = pathParts.indexOf('AMONTON');
+
+            if (projectIndex >= 0) {
+            return '/' + pathParts.slice(0, projectIndex + 1).join('/') + '/';
+            } else {
+            return '/';
+            }
+        }
+        document.getElementById('baseTag').setAttribute('href', getBasePath());
+        // Fallback for browsers with JavaScript disabled or very slow redirects
+        document.getElementById('redirectLink').href = `../../project.html?project=${projectFolder}`;
+    </script>
+</body>
+</html>
