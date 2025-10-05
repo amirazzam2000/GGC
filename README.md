@@ -1,0 +1,101 @@
+# Slider Data
+
+```json
+[
+  {
+    "video": "video.mp4",
+    "title": "This  Is A video example",
+    "body": "ooo video "
+  },
+  {
+    "image": "Domoblock_Gran Via Fdo el Católico_04.png",
+    "title": "",
+    "body": ""
+  },
+]
+``` 
+
+
+# Dividers
+
+```json
+[
+  {
+    "image": "Image_01.jpg",
+    "text": "Explore Our Vision"
+  },
+  {
+    "video": "video.mp4",
+    "text": "Quality Through Design"
+  }
+] 
+
+```
+
+# Project Metadata
+
+```json
+{
+  "title": "BALCONY",
+  "category": ["ARCHITECTURE", "RESIDENTIAL"],
+  "year": "2021",
+  "thumbnail_video": "photos/video.mp4",
+  "thumbnail_desc": "pretty balcony",
+  "description": "In a private family home dating back to 1918, overlooking the beautiful city of Gentofte north of bustling Copenhagen, the entire first floor has been fully renovated and completed with a new interior layout. This project focused on creating a harmonious blend of classic charm and modern functionality, optimizing natural light and flow throughout the living spaces. The design emphasizes natural materials and a minimalist aesthetic to create a serene and inviting atmosphere.",
+  "content": [
+    {"type": "header-vid", "size": 1, "src": "photos/video.mp4", "alt": "Kolon House Exterior"},
+    {"type": "img", "size": 3, "src": "photos/balcon.JPG", "alt": "Kolon House Living Room"},
+    {"type": "txt", "size": 1, "src": "This is the Exterior of the building."},
+    {"type": "txt", "size": 1, "src": "Phasellus at luctus augue. Mauris ut aliquet enim. Mauris vestibulum eleifend orci, eu mollis augue tempor quis. Cras gravida orci non augue volutpat, nec viverra nunc lacinia. Sed maximus faucibus ante tempor pulvinar. Aenean eget viverra tellus. Nam imperdiet neque eu metus gravida pulvinar. Sed non urna velit."},
+    {"type": "img", "size": 3, "src": "photos/exterior_01.JPG", "alt": "Kolon House Living Room"},
+    {"type": "video", "size": 2, "src": "photos/video.mp4", "alt": "video"},
+    {"type": "txt", "size": 1, "src": "Nam convallis maximus tristique. Pellentesque tincidunt lacinia neque. Mauris aliquet nisl vel sollicitudin mollis. Morbi ullamcorper tellus eu tortor sagittis, commodo dictum felis auctor. Fusce odio odio, euismod quis sodales vitae, faucibus sed lectus. Pellentesque sed enim ut urna congue mattis vel vehicula nibh. Maecenas lacinia facilisis risus, sed convallis dui ultrices sit amet. Maecenas eu est semper, sagittis nunc in, venenatis velit. Sed a varius dolor, non tempus massa. Aliquam eros dui, gravida interdum lectus et, accumsan viverra erat. Aliquam mi ligula, condimentum et congue eu, maximus at massa."}
+  ],
+  "location": "Barcelona",
+  "photography": "Anas Azzam",
+  "visualization": "Anas Azzam"
+}
+```
+
+# Latest index json 
+
+```json
+[
+  {
+    "folder": "project1",
+    "size": 4
+  }
+]
+
+```
+
+# Arch json 
+```json
+[
+  {
+    "folder": "project1",
+    "size": 2
+  },
+  {
+    "folder": "project1",
+    "size": 1
+  },
+  {
+    "folder": "project1",
+    "size": 1
+  },
+  {
+    "folder": "project4",
+    "size": 1
+  },
+  {
+    "folder": "project2",
+    "size": 1
+  },
+  {
+    "folder": "project3",
+    "size": 2
+  }
+]
+
+```

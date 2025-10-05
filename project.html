@@ -271,15 +271,15 @@
     }
 
   const path = getUrlParameter('project');
-  document.title = `${path} | AMONTON`;
+  document.title = `${path} | GGC`;
 
   function getFullBaseURL() {
       const { origin, pathname } = window.location;
       const pathParts = pathname.split('/');
-      const projectIndex = pathParts.indexOf('AMONTON');
+      const projectIndex = pathParts.indexOf('GGC');
 
       if (projectIndex >= 0) {
-        // Include everything up to and including 'AMONTON'
+        // Include everything up to and including 'GGC'
         const basePath = pathParts.slice(0, projectIndex + 1).join('/');
         return `${origin}${basePath}/`;
       } else {

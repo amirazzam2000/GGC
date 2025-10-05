@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AMONTON</title>
+  <title>GGC</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     /* Global Reset and Base Styles */
@@ -632,11 +632,11 @@
 </div>
 
 
-  <h2 class="section-title">Latest Work</h2> <!-- Added "Latest Work" title -->
+  <h2 class="section-title">Apartments</h2> <!-- Added "Latest Work" title -->
   <main class="project-list" id="projectList">
     <!-- Projects will be injected by JavaScript -->
   </main>
-
+<!-- 
   <section class="divider-section" id="dividerSection">
     </section>
 
@@ -645,15 +645,15 @@
     </main>
 
   <section class="divider-section" id="dividerSection1">
-    </section>
+    </section> -->
 
     <!-- About Section -->
     <section id="about-section" class="about-section">
         <h2>About Us</h2>
-        <p>Welcome to AMONTON, a creative studio dedicated to crafting exceptional design experiences. We believe that good design is not just about aesthetics, but about creating functional, intuitive, and impactful solutions that resonate with people.</p>
+        <p>Welcome to GGC, a creative studio dedicated to crafting exceptional design experiences. We believe that good design is not just about aesthetics, but about creating functional, intuitive, and impactful solutions that resonate with people.</p>
         <p>Our team is composed of passionate designers, architects, and visionaries who bring diverse perspectives and expertise to every project. From conceptualization to execution, we meticulously blend innovation with timeless principles to deliver spaces and products that stand out.</p>
         <p>With years of experience in the industry, we have had the privilege of working on a wide range of projects, from residential and commercial architecture to bespoke furniture design and digital interfaces. Our commitment to excellence and client satisfaction drives us to push boundaries and exceed expectations.</p>
-        <p>At AMONTON, we are constantly exploring new materials, technologies, and methodologies to ensure our work remains at the forefront of design. We are passionate about transforming ideas into tangible realities and creating lasting value for our clients and the communities we serve.</p>
+        <p>At GGC, we are constantly exploring new materials, technologies, and methodologies to ensure our work remains at the forefront of design. We are passionate about transforming ideas into tangible realities and creating lasting value for our clients and the communities we serve.</p>
     </section>
 
     <!-- Contact Section -->
@@ -662,26 +662,26 @@
         <p>We're always happy to hear from you. Find our office details and general inquiry contact below.</p>
         <div class="contact-info-container" style="align-items: center;">
             <div class="contact-block" style="text-align: center;">
-                <h3>Barcelona Office</h3>
-                <p>Amonton Design Studio</p>
-                <p>Barcelona Address </p>
-                <p>Spain</p>
-                <p>Phone: <a href="tel:+4512345678">+45 12 34 56 78</a></p>
-                <p>Email: <a href="mailto:cph@amonton.com">cph@amonton.com</a></p>
+                <h3>Athens Office</h3>
+                <p>Greece-Golf Constructions</p>
+                <p>Athens Address:</p>
+                <p>Greece</p>
+                <p>Phone: <a href="tel:+4512345678">+34 ...</a></p>
+                <p>Email: <a href="mailto:cph@GGC.com">cph@GGC.com</a></p>
             </div>
             <!-- <div class="contact-block">
                 <h3>New York Office</h3>
-                <p>Amonton Design Studio</p>
+                <p>GGC Design Studio</p>
                 <p>456 Broadway Ave</p>
                 <p>New York, NY 10012</p>
                 <p>USA</p>
                 <p>Phone: <a href="tel:+12125551234">+1 (212) 555-1234</a></p>
-                <p>Email: <a href="mailto:ny@amonton.com">ny@amonton.com</a></p>
+                <p>Email: <a href="mailto:ny@GGC.com">ny@GGC.com</a></p>
             </div> -->
         </div>
         <div class="contact-inquiry">
             <p>For general inquiries, please reach out to:</p>
-            <p><a href="mailto:info@amonton.com">info@amonton.com</a></p>
+            <p><a href="mailto:info@GGC.com">info@GGC.com</a></p>
         </div>
     </section>
 
@@ -694,10 +694,10 @@
     function getFullBaseURL() {
       const { origin, pathname } = window.location;
       const pathParts = pathname.split('/');
-      const projectIndex = pathParts.indexOf('AMONTON');
+      const projectIndex = pathParts.indexOf('GGC');
 
       if (projectIndex >= 0) {
-        // Include everything up to and including 'AMONTON'
+        // Include everything up to and including 'GGC'
         const basePath = pathParts.slice(0, projectIndex + 1).join('/');
         return `${origin}${basePath}/`;
       } else {
@@ -729,7 +729,7 @@
                 year: projectMetadata.year, // Get year from metadata.json
                 fullDescription: projectMetadata.thumbnail_desc, // You might want to use the full description from metadata.json
                 title: projectMetadata.title,
-                thumbnail_photo: projectMetadata.thumbnail_photo, // Get thumbnail_photo
+                thumbnail_img: projectMetadata.thumbnail_img, // Get thumbnail_img
                 thumbnail_video: projectMetadata.thumbnail_video // Get thumbnail_video
             };
             } catch (metadataError) {
@@ -741,7 +741,7 @@
                 year: project.year || 'N/A', // Fallback to index.json year or default
                 fullDescription: project.description, // Use description from index.json as fallback
                 title: project.title || 'Project Title',
-                thumbnail_photo: project.thumbnail || null, // Fallback for photo
+                thumbnail_img: project.thumbnail || null, // Fallback for photo
                 thumbnail_video: null // No video fallback from old structure
             };
             }
@@ -757,9 +757,9 @@
         thumbnailContainer.className = 'project-thumbnail-container';
 
         // Conditional rendering for thumbnail (photo or video)
-        if (project.thumbnail_photo) {
+        if (project.thumbnail_img) {
             const img = document.createElement('img');
-            img.src = `projects/${project.folder}/${project.thumbnail_photo}`;
+            img.src = `projects/${project.folder}/${project.thumbnail_img}`;
             img.alt = `${project.title} Thumbnail`;
             img.onerror = function() {
                 this.onerror = null;

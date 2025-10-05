@@ -18,7 +18,7 @@ function smoothScroll(targetId) {
 function getFullBaseURL() {
     const { origin, pathname } = window.location;
     const parts = pathname.split('/');
-    const projectIndex = parts.indexOf('AMONTON');
+    const projectIndex = parts.indexOf('GGC');
     if (projectIndex >= 0) {
         return `${origin}/${parts.slice(1, projectIndex + 1).join('/')}/`;
     } else {

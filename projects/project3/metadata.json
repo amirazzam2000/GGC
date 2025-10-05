@@ -1,18 +1,21 @@
 {
-  "title": "Project 3",
-  "category": ["ARCHITECTURE", "RESIDENTIAL"],
-  "year": "2021",
-  "thumbnail_photo": "photos/Flipme_Turisme_01.png",
-  "thumbnail_desc": "Inspired by the timeless allure of Denmark's coasts, Shore Collection celebrates the serene yet dynamic essence of the shoreline and bustling harbors that define the Danish landscape.",
-  "description": "In a private family home dating back to 1918, overlooking the beautiful city of Gentofte north of bustling Copenhagen, the entire first floor has been fully renovated and completed with a new interior layout. This project focused on creating a harmonious blend of classic charm and modern functionality, optimizing natural light and flow throughout the living spaces. The design emphasizes natural materials and a minimalist aesthetic to create a serene and inviting atmosphere.",
+  "title": "Apartment 3",
+  "category": ["RESIDENTIAL"],
+  "year": "2025",
+  "thumbnail_img": "photos/living.jpg",
+  "thumbnail_desc": "The third apartment in the complex",
+  "description": "Apartment description",
   "content": [
-    {"type": "header-img", "size": 1, "src": "photos/header.jpg", "alt": "Kolon House Exterior"},
-    {"type": "img", "size": 2, "src": "photos/photos.jpg", "alt": "Kolon House Living Room"},
-    {"type": "img", "size": 2, "src": "photos/Anabell.png", "alt": "Kolon House Living Room"},
+    {"type": "header-img", "size": 2, "src": "photos/living.jpg", "alt": "Kolon House Exterior"},
+    {"type": "img", "size": 1, "src": "photos/living2.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 3, "src": "photos/kit.jpg", "alt": "Kolon House Living Room"},
     {"type": "txt", "size": 2, "src": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin molestie magna. Nullam quis neque in dui pellentesque volutpat. Mauris sapien libero, interdum sit amet pulvinar ut, auctor a nibh. Aliquam non elementum nisi. Phasellus dapibus aliquam urna in ultricies. Duis vitae pellentesque tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin efficitur placerat ex porttitor fringilla."},
-    {"type": "txt", "size": 1, "src": "Phasellus at luctus augue. Mauris ut aliquet enim. Mauris vestibulum eleifend orci, eu mollis augue tempor quis. Cras gravida orci non augue volutpat, nec viverra nunc lacinia. Sed maximus faucibus ante tempor pulvinar. Aenean eget viverra tellus. Nam imperdiet neque eu metus gravida pulvinar. Sed non urna velit."},
-    {"type": "txt", "size": 2, "src": " convallis maximus tristique. Pellentesque tincidunt lacinia neque. Mauris aliquet nisl vel sollicitudin mollis. Morbi ullamcorper tellus eu tortor sagittis, commodo dictum felis auctor. Fusce odio odio, euismod quis sodales vitae, faucibus sed lectus. Pellentesque sed enim ut urna congue mattis vel vehicula nibh. Maecenas lacinia facilisis risus, sed convallis dui ultrices sit amet. Maecenas eu est semper, sagittis nunc in, venenatis velit. Sed a varius dolor, non tempus massa. Aliquam eros dui, gravida interdum lectus et, accumsan viverra erat. Aliquam mi ligula, condimentum et congue eu, maximus at massa."}
+    {"type": "img", "size": 2, "src": "photos/bed.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 2, "src": "photos/bath.jpg", "alt": "Kolon House Living Room"},
+    {"type": "txt", "size": 2, "src": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin molestie magna. Nullam quis neque in dui pellentesque volutpat. Mauris sapien libero, interdum sit amet pulvinar ut, auctor a nibh. Aliquam non elementum nisi. Phasellus dapibus aliquam urna in ultricies. Duis vitae pellentesque tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin efficitur placerat ex porttitor fringilla."},
+    {"type": "img", "size": 2, "src": "photos/kit_bath.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 2, "src": "photos/living_kit.jpg", "alt": "Kolon House Living Room"}
   ],
-  "location": "Barcelona",
-  "photography": "Jonas Bjerre-Poulsen & Karl Tranberg Knudse"
+  "location": "Athens, Greece",
+  "photography": "Anas Azzam"
 }
