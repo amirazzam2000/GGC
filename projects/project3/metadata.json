@@ -4,15 +4,13 @@
   "year": "2025",
   "thumbnail_img": "photos/living.jpg",
   "thumbnail_desc": "The third apartment in the complex",
-  "description": "Apartment description",
+  "description": "The third apartment has an area of ​​45 square meters and consists of a living room open to a kitchen, a bedroom and a bathroom.",
   "content": [
     {"type": "header-img", "size": 2, "src": "photos/living.jpg", "alt": "Kolon House Exterior"},
     {"type": "img", "size": 1, "src": "photos/living2.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 3, "src": "photos/kit.jpg", "alt": "Kolon House Living Room"},
-    {"type": "txt", "size": 2, "src": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin molestie magna. Nullam quis neque in dui pellentesque volutpat. Mauris sapien libero, interdum sit amet pulvinar ut, auctor a nibh. Aliquam non elementum nisi. Phasellus dapibus aliquam urna in ultricies. Duis vitae pellentesque tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin efficitur placerat ex porttitor fringilla."},
     {"type": "img", "size": 2, "src": "photos/bed.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 2, "src": "photos/bath.jpg", "alt": "Kolon House Living Room"},
-    {"type": "txt", "size": 2, "src": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sollicitudin molestie magna. Nullam quis neque in dui pellentesque volutpat. Mauris sapien libero, interdum sit amet pulvinar ut, auctor a nibh. Aliquam non elementum nisi. Phasellus dapibus aliquam urna in ultricies. Duis vitae pellentesque tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin efficitur placerat ex porttitor fringilla."},
     {"type": "img", "size": 2, "src": "photos/kit_bath.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 2, "src": "photos/living_kit.jpg", "alt": "Kolon House Living Room"}
   ],

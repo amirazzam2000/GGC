@@ -1,0 +1,17 @@
+{
+  "title": "Apartment 8",
+  "category": ["RESIDENTIAL"],
+  "year": "2025",
+  "thumbnail_img": "photos/bed2.jpg",
+  "thumbnail_desc": "the eighth apartment in the complex",
+  "description": "The eighth apartment has an area of ​​30 square meters and consists of a living room open to a kitchen, a bedroom and a bathroom.",
+  "content": [
+    {"type": "header-img", "size": 2, "src": "photos/bed2.jpg", "alt": "Kolon House Exterior"},
+    {"type": "img", "size": 2, "src": "photos/kit.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 2, "src": "photos/bathroom.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 2, "src": "photos/bed2.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 2, "src": "photos/bed3.jpg", "alt": "Kolon House Living Room"}
+  ],
+  "location": "Athens, Greece",
+  "visualization": "Anas Azzam"
+}
