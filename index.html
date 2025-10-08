@@ -327,6 +327,14 @@
       margin-bottom: 80px; /* Space before the next section/footer */
     }
 
+        /* About and Contact Sections */
+    .section-description {
+      padding: 0px 80px 0px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
     .about-section h2, .contact-section h2 {
       font-size: 2.5rem;
       font-weight: 700;
@@ -341,6 +349,13 @@
       line-height: 1.8;
       color: #333;
       margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .section-description p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #333;
       text-align: left;
     }
 
@@ -471,12 +486,26 @@
         width: 100%; /* Ensure info section spans full width */
     }
 
+    /* .section-description {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    } */
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .slider {
         height: 100vh;
       }
-
+/* 
+      .section-description {
+        max-width: 500px;
+      } */
       /* Responsive for slider overlay text */
       .slide-title {
         font-size: 1.8rem;
@@ -534,12 +563,18 @@
         padding: 60px 20px;
         margin-bottom: 60px;
       }
+      .section-description {
+        padding: 60px 20px;
+      }
 
       .about-section h2, .contact-section h2 {
         font-size: 2rem;
       }
 
       .about-section p {
+        font-size: 1rem;
+      }
+      .section-description p {
         font-size: 1rem;
       }
 
@@ -560,6 +595,9 @@
     }
 
     @media (max-width: 480px) {
+      /* .section-description {
+        max-width: 300px;
+      } */
       .site-header {
         padding: 15px 10px;
       }
@@ -596,11 +634,16 @@
         padding: 40px 15px;
         margin-bottom: 40px;
       }
+      .section-description{
+        padding: 40px 15px;
+      }
 
       .about-section h2, .contact-section h2 {
         font-size: 1.8rem;
       }
     }
+    
+
 
   </style>
 <script src="common_functions.js"></script>
@@ -632,7 +675,10 @@
 </div>
 
 
-  <h2 class="section-title">Apartments</h2> <!-- Added "Latest Work" title -->
+  <h2 class="section-title">Apartments</h2>
+  <p class="section-description">
+    The following apartments are eligible for the Golden Visa program, priced at just €250,000. They are conveniently located only 6 minutes from Omonia Station and a 10-minute walk from both Monastiraki and Syntagma.
+  </p>
   <main class="project-list" id="projectList">
     <!-- Projects will be injected by JavaScript -->
   </main>

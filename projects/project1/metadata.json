@@ -7,19 +7,16 @@
   "description": "The first apartment has an area of ​​58.5 square meters and consists of a living room open to a kitchen with a bedroom and a bathroom.",
   "content": [
     {"type": "header-img", "size": 1, "src": "photos/living.jpg", "alt": "Kolon House Exterior"},
-    {"type": "img", "size": 3, "src": "photos/living2.jpg", "alt": "Kolon House Living Room"},
-    {"type": "txt", "size": 1, "src": " "},
-    {"type": "txt", "size": 1, "src": " "},
+    {"type": "img", "size": 1, "src": "photos/living2.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 3, "src": "photos/living_kit.jpg", "alt": "Kolon House Living Room"},
-    {"type": "img", "size": 2, "src": "photos/kit.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 3, "src": "photos/bed2.jpg", "alt": "img"},
+    {"type": "img", "size": 1, "src": "photos/bed.jpg", "alt": "img"},
     {"type": "img", "size": 2, "src": "photos/kit2.jpg", "alt": "Kolon House Living Room"},
-    {"type": "img", "size": 2, "src": "photos/bed.jpg", "alt": "img"},
-    {"type": "img", "size": 2, "src": "photos/bed2.jpg", "alt": "img"},
+    {"type": "img", "size": 2, "src": "photos/kit.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 2, "src": "photos/living_bed.jpg", "alt": "img"},
     {"type": "img", "size": 2, "src": "photos/bathroom.jpg", "alt": "img"},
     {"type": "img", "size": 2, "src": "photos/bath2.jpg", "alt": "img"},
-    {"type": "img", "size": 2, "src": "photos/crridor.jpg", "alt": "img"},
-    {"type": "img", "size": 2, "src": "photos/living_bed.jpg", "alt": "img"},
-    {"type": "img", "size": 2, "src": "photos/living_kit.jpg", "alt": "img"}
+    {"type": "img", "size": 2, "src": "photos/crridor.jpg", "alt": "img"}
   ],
   "location": "Athens, Greece",
   "visualization": "Anas Azzam"
