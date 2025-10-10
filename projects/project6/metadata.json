@@ -6,11 +6,12 @@
   "thumbnail_desc": "the sixth apartment in the complex",
   "description": "The sixth apartment has an area of 52.4 square meters and consists of a living room open to a kitchen, a bedroom and a bathroom.",
   "content": [
-    {"type": "header-img", "size": 2, "src": "photos/living.jpg", "alt": "Kolon House Exterior"},
+    {"type": "header-img", "size": 2, "src": "photos/plan.jpg", "alt": "Kolon House Exterior"},
     {"type": "img", "size": 1, "src": "photos/living_kit.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 3, "src": "photos/living_bed.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 2, "src": "photos/bathroom.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 2, "src": "photos/bed.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 2, "src": "photos/living.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 2, "src": "photos/living2.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 2, "src": "photos/living3.jpg", "alt": "Kolon House Living Room"}
   ],

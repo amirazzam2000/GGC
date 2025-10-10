@@ -6,7 +6,7 @@
   "thumbnail_desc": "the seventh apartment in the complex",
   "description": "The seventh apartment has an area of ​​33.5 square meters and consists of a living room open to a kitchen with a bedroom and a bathroom.",
   "content": [
-    {"type": "header-img", "size": 2, "src": "photos/living_kit.jpg", "alt": "Kolon House Exterior"},
+    {"type": "header-img", "size": 2, "src": "photos/plan.jpg", "alt": "Kolon House Exterior"},
     {"type": "img", "size": 2, "src": "photos/bed.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 2, "src": "photos/bathroom.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 2, "src": "photos/kit_living.jpg", "alt": "Kolon House Living Room"},

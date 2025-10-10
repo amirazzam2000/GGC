@@ -4,13 +4,14 @@
   "year": "2025",
   "thumbnail_img": "photos/living.jpg",
   "thumbnail_desc": "the second apartment in the complex",
-  "description": "The second apartment has an area of 58.5 square meters and consists of a living room open to a kitchen with a bedroom and a bathroom.",
+  "description": "The second apartment has an area of 43 square meters and consists of a living room open to a kitchen with a bedroom and a bathroom.",
   "content": [
-    {"type": "header-img", "size": 2, "src": "photos/living.jpg", "alt": "Kolon House Exterior"},
+    {"type": "header-img", "size": 2, "src": "photos/plan.jpg", "alt": "Kolon House Exterior"},
     {"type": "img", "size": 1, "src": "photos/living2.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 3, "src": "photos/living.jpg", "alt": "Kolon House Living Room"},
     {"type": "img", "size": 3, "src": "photos/kit_bath.jpg", "alt": "Kolon House Living Room"},
-    {"type": "img", "size": 2, "src": "photos/bed.jpg", "alt": "Kolon House Living Room"},
-    {"type": "img", "size": 2, "src": "photos/bath.jpg", "alt": "Kolon House Living Room"}
+    {"type": "img", "size": 1, "src": "photos/bath.jpg", "alt": "Kolon House Living Room"},
+    {"type": "img", "size": 4, "src": "photos/bed.jpg", "alt": "Kolon House Living Room"}
   ],
   "location": "Athens, Greece",
   "visualization": "Anas Azzam"
